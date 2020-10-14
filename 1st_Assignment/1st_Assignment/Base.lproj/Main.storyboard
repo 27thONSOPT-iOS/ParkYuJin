@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="파트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drb-N5-NJ4">
-                                <rect key="frame" x="154" y="374" width="30" height="21"/>
+                                <rect key="frame" x="154" y="409" width="30" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -34,19 +34,23 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqZ-Sp-znP">
-                                <rect key="frame" x="234" y="374" width="27" height="21"/>
+                                <rect key="frame" x="234" y="409" width="27" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="✋열매🐶님 안녕하세요🤚" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vM-7H-VGa">
-                                <rect key="frame" x="112" y="438" width="191" height="21"/>
+                                <rect key="frame" x="112" y="473" width="191" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bio-photo" translatesAutoresizingMaskIntoConstraints="NO" id="mkP-JO-6JG">
+                                <rect key="frame" x="61" y="201" width="292" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -64,7 +68,7 @@
         <!--Login-->
         <scene sceneID="nzj-E9-zYG">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" modalPresentationStyle="fullScreen" id="WQi-U6-oJB" customClass="SecondViewController" customModule="_st_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" modalPresentationStyle="fullScreen" id="WQi-U6-oJB" customClass="LoginViewController" customModule="_st_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ym3-o7-73x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,7 +107,7 @@
                                     <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchUpMain:" destination="WQi-U6-oJB" eventType="touchUpInside" id="M6o-Iv-ALB"/>
+                                    <action selector="touchUpLogin:" destination="WQi-U6-oJB" eventType="touchUpInside" id="Own-FX-J2h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYE-M8-e6Y">
@@ -114,7 +118,7 @@
                                     <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchUpSignup:" destination="WQi-U6-oJB" eventType="touchUpInside" id="Hx3-tI-OFG"/>
+                                    <action selector="touchUpSignUp:" destination="WQi-U6-oJB" eventType="touchUpInside" id="fn5-gb-Or7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -123,8 +127,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="qQZ-GB-A2p"/>
                     <connections>
-                        <outlet property="nameTextField" destination="m9K-6b-XQM" id="e24-ab-vXV"/>
-                        <outlet property="partTextField" destination="L5j-aQ-IjU" id="16D-6y-piZ"/>
+                        <outlet property="nameTextField" destination="m9K-6b-XQM" id="LQT-rd-y3c"/>
+                        <outlet property="partTextField" destination="L5j-aQ-IjU" id="Sh3-1G-dsX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oaT-FU-wEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -134,7 +138,7 @@
         <!--Sign Up-->
         <scene sceneID="pv4-In-5si">
             <objects>
-                <viewController storyboardIdentifier="ThirdViewController" modalPresentationStyle="fullScreen" id="C87-Gz-eEN" customClass="ThirdViewController" customModule="_st_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" modalPresentationStyle="fullScreen" id="C87-Gz-eEN" customClass="SignUpViewController" customModule="_st_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SNY-Gv-A05">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,7 +183,7 @@
                                     <color key="titleColor" systemColor="systemYellowColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchUpLogin:" destination="C87-Gz-eEN" eventType="touchUpInside" id="10v-eC-zjI"/>
+                                    <action selector="touchUpLogin:" destination="C87-Gz-eEN" eventType="touchUpInside" id="VTv-e4-4LA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="출생연도" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tG1-wJ-PHB">
@@ -194,16 +198,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign Up" id="h8P-vd-MeS"/>
+                    <connections>
+                        <outlet property="birthTextField" destination="vAJ-4b-Xdf" id="t3O-N1-7fJ"/>
+                        <outlet property="nameTextField" destination="vAJ-4b-Xdf" id="KX7-2w-8DH"/>
+                        <outlet property="partTextField" destination="tml-di-Mhw" id="exp-oC-2sX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GhO-yD-LT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3772" y="90"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="8zT-tP-vrt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zlI-Ug-zy1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="currentContext" id="N1N-Ot-n3B" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationViewController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="currentContext" id="N1N-Ot-n3B" customClass="NavigationViewController" customModule="_st_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HYJ-DV-xhx">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -214,11 +222,13 @@
                         <segue destination="WQi-U6-oJB" kind="relationship" relationship="rootViewController" id="DYr-p9-w5d"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zlI-Ug-zy1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1960.8695652173915" y="89.732142857142847"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bio-photo" width="3024" height="3024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

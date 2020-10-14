@@ -9,31 +9,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var partLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet var partLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
     
     var part: String?
     var name: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLabel()
         // Do any additional setup after loading the view.
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        setLabel()
+    }
     func setLabel(){
         if let part = self.part,
            let name = self.name {
             self.partLabel.text = part
             self.partLabel.sizeToFit()
-            
+
             self.nameLabel.text = "✨\(name)님 안녕하세요✨"
-//            self.nameLabel.sizeToFit()
         }
     }
     @IBAction func touchUpLogin(_ sender: UIButton) {
-        if let nextvc = self.storyboard?.instantiateViewController(identifier: "SecondViewController") {
-            self.present(nextvc, animated: true, completion: nil)
+        if let loginvc = self.storyboard?.instantiateViewController(identifier: "NavigationViewController") {
+            self.present(loginvc, animated: true, completion: nil)
         }
     }
     
