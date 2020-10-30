@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
         guard let signUpvc = self.storyboard?.instantiateViewController(identifier: "SignUpViewController") else {
                     return
                 }
-                self.navigationController?.pushViewController(signUpvc, animated: true)
+        self.navigationController?.pushViewController(signUpvc, animated: true)
 
     }
     
