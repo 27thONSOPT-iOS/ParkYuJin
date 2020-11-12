@@ -8,7 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet var rootView: UIView!
     @IBOutlet var netwokingCollectionView: UICollectionView!
+    @IBOutlet var topView: UIView!
+    @IBOutlet var topViewHeightConstraint: NSLayoutConstraint!
+    
     
     var peopleList: [People] = []
     
@@ -75,4 +81,22 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         return 0 }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 41, left: 24, bottom: 0, right: 24) }
+}
+
+extension ViewController: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.topViewHeightConstraint.constant = 88
+            self.rootView.layoutIfNeeded()
+        })
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if (decelerate) {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.topViewHeightConstraint.constant = 0
+                self.rootView.layoutIfNeeded()
+            })
+        }
+    }
 }

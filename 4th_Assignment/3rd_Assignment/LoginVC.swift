@@ -9,31 +9,30 @@ import UIKit
 
 class LoginVC: UIViewController {
     
+    @IBOutlet var rootView: UIView!
     @IBOutlet var partTextfield: UITextField!
     @IBOutlet var nameTextfield: UITextField!
+    
+    var keyboardShown: Bool = false
+    var originY: CGFloat?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func touchUpHome(_ sender: Any) {
-        guard let pvc = self.storyboard?.instantiateViewController(identifier: "HomeVC") as? HomeVC else {
-            return
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         }
-        pvc.part = self.partTextfield.text
-        
-        self.dismiss(animated: true, completion: nil)
-    }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func touchUpHome(_ sender: UIButton) {
+        let presentVC = self.presentingViewController as? UITabBarController
+        presentVC?.selectedIndex = 0
+        
+        guard let homeVC = presentVC?.selectedViewController as? HomeVC else { return }
+        homeVC.part = self.partTextfield.text
+        
+        self.presentingViewController?.dismiss(animated: true)
     }
-    */
 
 }

@@ -17,16 +17,18 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLabel()
-        // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+            setLabel()
+        }
     func setLabel(){
         if let part = self.part {
             self.partNameLabel.text = part
             self.partNameLabel.sizeToFit()
+            self.partImageView.image = UIImage(named: part)
         }
     }
-    @IBAction func touchUpLogin(_ sender: Any) {
+    @IBAction func touchUpLogin(_ sender: UIButton) {
         if let nextVC =
             storyboard?.instantiateViewController(identifier: "LoginVC") {
             nextVC.modalPresentationStyle = .fullScreen
