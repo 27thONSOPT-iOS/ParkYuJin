@@ -44,6 +44,12 @@
                                     <action selector="touchUpLogin:" destination="845-hp-sC1" eventType="touchUpInside" id="FXP-AX-L4L"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gf5-C1-udq">
+                                <rect key="frame" x="138" y="535" width="99" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oaS-lH-z7T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -51,20 +57,23 @@
                             <constraint firstItem="AzG-u4-Rp9" firstAttribute="leading" secondItem="oaS-lH-z7T" secondAttribute="leading" constant="138" id="6B4-ej-wqU"/>
                             <constraint firstItem="xWS-H5-gQY" firstAttribute="top" secondItem="oaS-lH-z7T" secondAttribute="top" constant="76" id="Jvq-ck-Uug"/>
                             <constraint firstItem="oaS-lH-z7T" firstAttribute="trailing" secondItem="AzG-u4-Rp9" secondAttribute="trailing" constant="138" id="MNB-LN-xl8"/>
+                            <constraint firstItem="gf5-C1-udq" firstAttribute="trailing" secondItem="AzG-u4-Rp9" secondAttribute="trailing" id="Mp0-IN-xSF"/>
                             <constraint firstItem="oaS-lH-z7T" firstAttribute="trailing" secondItem="vVU-Kb-BOK" secondAttribute="trailing" constant="134" id="NIb-bu-tIV"/>
                             <constraint firstItem="Itn-xR-92N" firstAttribute="top" secondItem="xWS-H5-gQY" secondAttribute="bottom" constant="43" id="NPf-qW-2YG"/>
                             <constraint firstItem="AzG-u4-Rp9" firstAttribute="top" secondItem="vVU-Kb-BOK" secondAttribute="bottom" constant="36" id="U7V-lU-v4R"/>
+                            <constraint firstItem="gf5-C1-udq" firstAttribute="leading" secondItem="AzG-u4-Rp9" secondAttribute="leading" id="ZsH-Gc-Wdd"/>
                             <constraint firstItem="vVU-Kb-BOK" firstAttribute="top" secondItem="xWS-H5-gQY" secondAttribute="bottom" constant="43" id="amP-fr-NYc"/>
                             <constraint firstItem="oaS-lH-z7T" firstAttribute="trailing" secondItem="xWS-H5-gQY" secondAttribute="trailing" constant="63" id="nyK-Yn-hfn"/>
                             <constraint firstItem="xWS-H5-gQY" firstAttribute="leading" secondItem="oaS-lH-z7T" secondAttribute="leading" constant="62" id="roh-4x-415"/>
                             <constraint firstItem="Itn-xR-92N" firstAttribute="leading" secondItem="oaS-lH-z7T" secondAttribute="leading" constant="134" id="uei-Wl-70P"/>
+                            <constraint firstItem="gf5-C1-udq" firstAttribute="top" secondItem="AzG-u4-Rp9" secondAttribute="bottom" constant="35" id="wKh-Wp-UpW"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="tqT-xu-yeP"/>
                     <connections>
+                        <outlet property="nameLabel" destination="gf5-C1-udq" id="W4A-4G-bez"/>
                         <outlet property="partImageView" destination="xWS-H5-gQY" id="qk1-4Y-a2X"/>
-                        <outlet property="partLabel" destination="Itn-xR-92N" id="ztf-Jk-sSS"/>
-                        <outlet property="partNameLabel" destination="vVU-Kb-BOK" id="1Q9-rD-r5J"/>
+                        <outlet property="partLabel" destination="vVU-Kb-BOK" id="OcT-6G-046"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1zK-Pt-7wQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -106,7 +115,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-yZ-ID8">
                                 <rect key="frame" x="141" y="466" width="131" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imM-Sg-u8B">
                                 <rect key="frame" x="103" y="529" width="30" height="21"/>
